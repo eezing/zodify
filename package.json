@@ -1,0 +1,33 @@
+{
+  "name": "zodify",
+  "version": "0.1.0",
+  "private": true,
+  "description": "TypeScript to Zod in the browser",
+  "scripts": {
+    "build": "next build",
+    "dev": "PORT=3835 next dev",
+    "start": "PORT=3835 next start"
+  },
+  "prettier": {
+    "bracketSpacing": true,
+    "semi": true,
+    "singleQuote": true
+  },
+  "dependencies": {
+    "@monaco-editor/react": "^4.4.6",
+    "lodash.debounce": "^4.0.8",
+    "next": "13.0.1",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "ts-to-zod": "^1.13.1",
+    "typescript": "4.8.4",
+    "zod": "^3.19.1"
+  },
+  "devDependencies": {
+    "@types/lodash.debounce": "^4.0.7",
+    "@types/node": "^18.11.9",
+    "@types/react": "^18.0.24",
+    "@types/react-dom": "^18.0.8",
+    "prettier": "^2.7.1"
+  }
+}
