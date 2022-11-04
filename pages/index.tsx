@@ -1,5 +1,6 @@
 import { NextPage } from 'next';
 import dynamic from 'next/dynamic';
+import Header from '../components/Header';
 
 const Container = dynamic(() => import('../components/Container'), {
   ssr: false,
@@ -8,11 +9,13 @@ const Container = dynamic(() => import('../components/Container'), {
 const Page: NextPage = () => {
   return (
     <>
-      <Container />
+      <div style={{ height: '100vh', backgroundColor: '#1e1e1e' }}>
+        <Header />
+        <Container />
+      </div>
       <style jsx global>{`
         body {
-          margin: 1vh 0 0 0;
-          background-color: #1e1e1e;
+          margin: 0;
         }
       `}</style>
     </>

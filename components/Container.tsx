@@ -6,7 +6,7 @@ import { generate } from 'ts-to-zod';
 const Container: FC = () => {
   const defaultSource =
     getSearchParam('source') ??
-    'interface Foo {\n    bar: string;\n    biz: boolean;\n    baz: number;\n};';
+    '// Define your interfaces here\n\ninterface Foo {\n    bar: string;\n    biz: boolean;\n    baz: number;\n};\n';
 
   const [zodCode, setZodCode] = useState(compileZod(defaultSource) ?? '');
 
@@ -29,8 +29,8 @@ const Container: FC = () => {
   return (
     <div className="container">
       <Monaco
-        height="99vh"
-        width="45vw"
+        height="100%"
+        width="50%"
         defaultLanguage="typescript"
         theme="vs-dark"
         defaultValue={defaultSource}
@@ -38,8 +38,8 @@ const Container: FC = () => {
         options={{ minimap: { enabled: false }, wordWrap: 'on' }}
       />
       <Monaco
-        height="99vh"
-        width="55vw"
+        height="100%"
+        width="50%"
         defaultLanguage="typescript"
         theme="vs-dark"
         value={zodCode}
@@ -53,6 +53,7 @@ const Container: FC = () => {
         .container {
           display: flex;
           justify-content: center;
+          height: 100%;
         }
       `}</style>
     </div>
